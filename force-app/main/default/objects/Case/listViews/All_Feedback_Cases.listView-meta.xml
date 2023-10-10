@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Feedback_Cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Case_Comment__c</columns>
+    <columns>Feedback_Sentiment__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>PARENT.CASE_NUMBER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Case_Comment__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>PARENT.CASE_NUMBER</field>
+        <operation>contains</operation>
+    </filters>
+    <label>All Feedback Cases</label>
+</ListView>
