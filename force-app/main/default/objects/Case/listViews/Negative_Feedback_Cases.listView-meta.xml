@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Negative_Feedback_Cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>PARENT.CASE_NUMBER</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.REASON</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Account_SLA__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Case_Comment__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>PARENT.CASE_NUMBER</field>
+        <operation>notContain</operation>
+    </filters>
+    <label>Negative Feedback Cases</label>
+</ListView>
